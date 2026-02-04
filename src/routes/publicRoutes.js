@@ -6,6 +6,10 @@ const { emailExiste, usuarioExiste } = require('../services/userService')
 const { createToken } = require('../services/authService')
 let { userDB } = require('../config/database')
 
+server.get('/boasvindas', async (req, res) => {
+    return res.status(200).json({ memsagem: "Boas-vindas ao AllBooks!" })
+)
+
 server.post('/cadastrar', async (req, res) => {
     const { email, senha, nome, endereco, complemento, cep } = req.body;
 
