@@ -6,7 +6,7 @@ const { emailExiste, usuarioExiste } = require('../services/userService')
 const { createToken } = require('../services/authService')
 let { userDB } = require('../config/database')
 
-server.get('/boasvindas', async (req, res) => {
+server.get('/welcome', async (req, res) => {
     return res.status(200).json({ msg: "Sejam bem-vindos ao AllBooks!" })
 })
 
