@@ -7,8 +7,8 @@ const { createToken } = require('../services/authService')
 let { userDB } = require('../config/database')
 
 server.get('/boasvindas', async (req, res) => {
-    return res.status(200).json({ memsagem: "Boas-vindas ao AllBooks!" })
-)
+    return res.status(200).json({ msg: "Sejam bem-vindos ao AllBooks!" })
+})
 
 server.post('/cadastrar', async (req, res) => {
     const { email, senha, nome, endereco, complemento, cep } = req.body;
